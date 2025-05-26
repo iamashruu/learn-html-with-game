@@ -1,0 +1,261 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: #f0f4f8;
+    padding: 20px;
+}
+
+/* .arena {
+    position: relative;
+    width: 90%;
+    max-width: 700px;
+    height: 250px;
+    margin: 0 auto 20px;
+    border: 2px solid #ccc;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.character {
+    position: absolute;
+    bottom: 0;
+    width: 120px;
+    transition: all 0.5s ease;
+}
+
+.hero {
+    left: 50px;
+}
+
+.enemy {
+    right: 50px;
+} */
+
+img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    border: 3px solid #555;
+    border-radius: 10px;
+    background: #111;
+}
+
+.arena {
+    position: relative;
+    width: 100%;
+    height: 250px;
+}
+
+.character {
+    position: absolute;
+    width: 120px;
+    bottom: 0;
+    transition: transform 0.3s ease-in-out;
+}
+
+.hero {
+    left: 250px;
+}
+
+.enemy {
+    right: 50px;
+}
+
+.run {
+    animation: heroRun 1s forwards;
+}
+
+@keyframes heroRun {
+    from {
+        left: 50px;
+    }
+
+    to {
+        left: 350px;
+    }
+
+    /* Adjust depending on enemy position */ }
+.flipped {
+    transform: scaleX(-1);
+}
+
+.healthbar {
+    width: 120px;
+    height: 15px;
+    background: #ddd;
+    border: 1px solid #444;
+    position: absolute;
+    top: 10px;
+    left: 50px;
+}
+
+.enemy-bar {
+    left: auto;
+    right: 50px;
+}
+
+.health-fill {
+    height: 100%;
+    background: linear-gradient(to right, #4caf50, #81c784);
+    width: 100%;
+    transition: width 0.3s ease;
+}
+
+.challenge {
+    margin-top: 20px;
+}
+
+textarea {
+    width: 60%;
+    height: 80px;
+    font-size: 16px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.examples {
+    background: #f4f4f4;
+    padding: 10px;
+    margin: 10px auto;
+    width: 80%;
+    border-radius: 6px;
+    font-family: monospace;
+    font-size: 14px;
+    text-align: left;
+}
+
+
+.info-card {
+    background: #eef6ff;
+    border: 1px solid #c6e0ff;
+    padding: 15px;
+    width: 85%;
+    margin: 20px auto;
+    border-radius: 6px;
+    text-align: left;
+}
+
+.info-card ul {
+    padding-left: 20px;
+}
+
+.info-card code {
+    background: #fff;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.health-bar-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+    text-align: left;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+.health-bar {
+    width: 100%;
+    height: 20px;
+    background-color: #444;
+    border: 2px solid #222;
+    border-radius: 6px;
+    margin-top: 5px;
+    overflow: hidden;
+}
+
+.health-fill {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(90deg, #ff2e2e, #ff7676);
+    transition: width 0.5s ease;
+}
+
+.health-bar-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto 10px;
+    text-align: left;
+    font-size: 14px;
+}
+
+.health-bar {
+    width: 100%;
+    height: 20px;
+    background-color: #444;
+    border: 2px solid #222;
+    border-radius: 6px;
+    margin-top: 5px;
+    overflow: hidden;
+}
+
+.health-fill {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(90deg, #28a745, #70e36b);
+    transition: width 0.5s ease, background 0.5s ease;
+}
+
+#hero-health-text {
+    font-weight: bold;
+}
+
+#enemy-health-text {
+    font-weight: bold;
+}
+
+.character-container {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin: 20px 0;
+}
+
+
+
+textarea {
+    width: 400px;
+    height: 80px;
+    font-family: monospace;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+button {
+    margin: 10px 5px 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+}
+
+#submitBtn {
+    background-color: #28a745;
+    color: white;
+}
+
+#resetBtn {
+    background-color: #dc3545;
+    color: white;
+}
+
+#result {
+    font-size: 18px;
+    margin-top: 10px;
+    min-height: 28px;
+}
+
+#lives {
+    font-size: 20px;
+    margin-top: 10px;
+    color: #ff5252;
+}

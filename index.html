@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CodeShikhi: Code Warriors</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <h1>CodeShikhi: Learn HTML Headings Game</h1>
+    
+    <div class="info-card">
+        <h2>📘 What Are Headings in HTML?</h2>
+        <p>Headings help organize content into sections. HTML provides six levels of headings:</p>
+        <ul>
+            <li><code>&lt;h1&gt;</code> – Main title (used only once)</li>
+            <li><code>&lt;h2&gt;</code> – Major sections</li>
+            <li><code>&lt;h3&gt;</code> – Sub-sections</li>
+            <li><code>&lt;h4&gt;</code> – Smaller details</li>
+            <li><code>&lt;h5&gt;</code> – Minor headings</li>
+            <li><code>&lt;h6&gt;</code> – Least important headings</li>
+        </ul>
+    </div>
+    
+    <div id="question" style="max-width: 600px; margin: auto; font-size: 18px;"></div>
+    <div class="character-container arena">
+        <div class="hero run">
+            <img id="hero" class="hero run" src="images/idle.gif" alt="Hero" />
+            <div class="health-bar-container">
+                <span>Hero Lives: <span id="lives">❤️❤️❤️</span></span>
+            </div>
+        </div>
+    
+        <div>
+            <img id="enemy" class="flipped enemy" src="images/idle.gif" alt="Enemy" />
+            <div class="health-bar-container">
+                <span>Enemy Health: <span id="enemy-health-text">100%</span></span>
+                <div class="health-bar">
+                    <div id="enemy-health-fill" class="health-fill"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <textarea id="codeInput" placeholder="Type your HTML code here..."></textarea><br />
+    
+    <button id="submitBtn" onclick="submitCode()">Submit</button>
+    <button id="resetBtn" onclick="resetGame()">Reset</button>
+    
+    <div id="result"></div>
+    
+   
+    <script src="game.js"></script>
+</body>
+
+</html>
